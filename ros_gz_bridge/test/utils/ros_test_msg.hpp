@@ -71,6 +71,8 @@
 #include <tf2_msgs/msg/tf_message.hpp>
 #include <trajectory_msgs/msg/joint_trajectory.hpp>
 #include <rcl_interfaces/msg/parameter_value.hpp>
+#include <lrauv_msgs/msg/lrauv_init.hpp>
+#include <lrauv_msgs/msg/lrauv_state.hpp>
 
 namespace ros_gz_bridge
 {

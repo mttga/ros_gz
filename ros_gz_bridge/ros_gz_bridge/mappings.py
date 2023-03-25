@@ -99,4 +99,8 @@ MAPPINGS = {
     'trajectory_msgs': [
         Mapping('JointTrajectory', 'JointTrajectory'),
     ],
+    'lrauv_msgs': [
+        Mapping('LRAUVInit', 'LRAUVInit'),
+        Mapping('LRAUVState', 'LRAUVState')
+    ],
 }

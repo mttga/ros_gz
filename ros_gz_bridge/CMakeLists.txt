@@ -33,6 +33,9 @@ else()
   message(FATAL_ERROR "This branch is only compatible with Gazebo Garden forward.")
 endif()
 
+# Lrauv
+find_package(lrauv_gazebo_plugins REQUIRED)
+
 set(GZ_MSGS_VERSION_MAJOR ${${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}_VERSION_MAJOR})
 set(GZ_MSGS_VERSION_MINOR ${${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}_VERSION_MINOR})
 set(GZ_MSGS_VERSION_PATCH ${${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}_VERSION_PATCH})
@@ -50,6 +53,10 @@ set(BRIDGE_MESSAGE_TYPES
   std_msgs
   tf2_msgs
   trajectory_msgs
+<<<<<<< HEAD
+=======
+  lrauv_msgs
+>>>>>>> master
 )
 
 set(generated_path "${CMAKE_BINARY_DIR}/generated")
@@ -108,6 +115,10 @@ add_library(${bridge_lib}
 target_link_libraries(${bridge_lib}
   ${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}::core
   ${GZ_TARGET_PREFIX}-transport${GZ_TRANSPORT_VER}::core
+<<<<<<< HEAD
+=======
+  lrauv_gazebo_plugins::lrauv_gazebo_messages
+>>>>>>> master
 )
 
 ament_target_dependencies(${bridge_lib}
@@ -125,6 +136,10 @@ target_include_directories(${bridge_lib}
 target_link_libraries(${bridge_lib}
   ${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}::core
   ${GZ_TARGET_PREFIX}-transport${GZ_TRANSPORT_VER}::core
+<<<<<<< HEAD
+=======
+  lrauv_gazebo_plugins::lrauv_gazebo_messages
+>>>>>>> master
 )
 
 rclcpp_components_register_node(
@@ -184,6 +199,10 @@ if(BUILD_TESTING)
     ${rcl_interfaces_TARGETS}
     gtest
     gtest_main
+<<<<<<< HEAD
+=======
+    lrauv_gazebo_plugins::lrauv_gazebo_messages
+>>>>>>> master
   )
   target_include_directories(test_rcl_interfaces
     PRIVATE
@@ -217,6 +236,10 @@ if(BUILD_TESTING)
     ${GTEST_LIBRARIES}
     ${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}::core
     ${GZ_TARGET_PREFIX}-transport${GZ_TRANSPORT_VER}::core
+<<<<<<< HEAD
+=======
+    lrauv_gazebo_plugins::lrauv_gazebo_messages
+>>>>>>> master
   )
   ament_target_dependencies(test_utils
     rclcpp

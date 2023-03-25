@@ -34,6 +34,8 @@ else()
   message(FATAL_ERROR "This branch is only compatible with Gazebo Garden forward.")
 endif()
 
+find_package(lrauv_gazebo_plugins REQUIRED)
+
 include_directories(include)
 
 set(executable
@@ -47,6 +49,7 @@ add_executable(${executable}
 target_link_libraries(${executable}
   ${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}::core
   ${GZ_TARGET_PREFIX}-transport${GZ_TRANSPORT_VER}::core
+  lrauv_gazebo_plugins::lrauv_gazebo_messages
 )
 
 ament_target_dependencies(${executable}

@@ -38,10 +38,14 @@ class MessageMapping:
 
     def gz_string(self):
         # Return GZ string version of a message (eg gz.msgs.Bool)
+        if self.gz_message_name.startswith('LRAUV'):
+            return f'lrauv_gazebo_plugins.msgs.{self.gz_message_name}'
         return f'gz.msgs.{self.gz_message_name}'
 
     def gz_type(self):
         # Return GZ type of a message (eg gz::msgs::Bool)
+        if self.gz_message_name.startswith('LRAUV'):
+            return f'lrauv_gazebo_plugins::msgs::{self.gz_message_name}'
         return f'gz::msgs::{self.gz_message_name}'
 
     def unique(self):

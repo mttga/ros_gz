@@ -62,6 +62,8 @@
 #include <gz/msgs/vector3d.pb.h>
 #include <gz/msgs/video_record.pb.h>
 #include <gz/msgs/wrench.pb.h>
+#include "lrauv_gazebo_plugins/lrauv_init.pb.h"
+#include "lrauv_gazebo_plugins/lrauv_state.pb.h"
 
 #include <memory>
 
