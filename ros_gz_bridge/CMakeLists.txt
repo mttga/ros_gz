@@ -53,10 +53,7 @@ set(BRIDGE_MESSAGE_TYPES
   std_msgs
   tf2_msgs
   trajectory_msgs
-<<<<<<< HEAD
-=======
   lrauv_msgs
->>>>>>> master
 )
 
 set(generated_path "${CMAKE_BINARY_DIR}/generated")
@@ -115,10 +112,7 @@ add_library(${bridge_lib}
 target_link_libraries(${bridge_lib}
   ${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}::core
   ${GZ_TARGET_PREFIX}-transport${GZ_TRANSPORT_VER}::core
-<<<<<<< HEAD
-=======
   lrauv_gazebo_plugins::lrauv_gazebo_messages
->>>>>>> master
 )
 
 ament_target_dependencies(${bridge_lib}
@@ -136,10 +130,7 @@ target_include_directories(${bridge_lib}
 target_link_libraries(${bridge_lib}
   ${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}::core
   ${GZ_TARGET_PREFIX}-transport${GZ_TRANSPORT_VER}::core
-<<<<<<< HEAD
-=======
   lrauv_gazebo_plugins::lrauv_gazebo_messages
->>>>>>> master
 )
 
 rclcpp_components_register_node(
@@ -199,10 +190,7 @@ if(BUILD_TESTING)
     ${rcl_interfaces_TARGETS}
     gtest
     gtest_main
-<<<<<<< HEAD
-=======
     lrauv_gazebo_plugins::lrauv_gazebo_messages
->>>>>>> master
   )
   target_include_directories(test_rcl_interfaces
     PRIVATE
@@ -236,10 +224,7 @@ if(BUILD_TESTING)
     ${GTEST_LIBRARIES}
     ${GZ_TARGET_PREFIX}-msgs${GZ_MSGS_VER}::core
     ${GZ_TARGET_PREFIX}-transport${GZ_TRANSPORT_VER}::core
-<<<<<<< HEAD
-=======
     lrauv_gazebo_plugins::lrauv_gazebo_messages
->>>>>>> master
   )
   ament_target_dependencies(test_utils
     rclcpp
