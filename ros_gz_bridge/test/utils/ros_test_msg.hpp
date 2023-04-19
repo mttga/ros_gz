@@ -73,6 +73,9 @@
 #include <rcl_interfaces/msg/parameter_value.hpp>
 #include <lrauv_msgs/msg/lrauv_init.hpp>
 #include <lrauv_msgs/msg/lrauv_state.hpp>
+#include <lrauv_msgs/msg/lrauv_command.hpp>
+#include <lrauv_msgs/msg/lrauv_range_bearing_request.hpp>
+#include <lrauv_msgs/msg/lrauv_range_bearing_response.hpp>
 
 namespace ros_gz_bridge
 {

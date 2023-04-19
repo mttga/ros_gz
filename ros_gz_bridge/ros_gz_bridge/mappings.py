@@ -101,6 +101,9 @@ MAPPINGS = {
     ],
     'lrauv_msgs': [
         Mapping('LRAUVInit', 'LRAUVInit'),
-        Mapping('LRAUVState', 'LRAUVState')
+        Mapping('LRAUVState', 'LRAUVState'),
+        Mapping('LRAUVCommand', 'LRAUVCommand'),
+        Mapping('LRAUVRangeBearingRequest', 'LRAUVRangeBearingRequest'),
+        Mapping('LRAUVRangeBearingResponse', 'LRAUVRangeBearingResponse'),
     ],
 }
